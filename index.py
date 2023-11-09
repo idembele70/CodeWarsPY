@@ -1,5 +1,4 @@
-def generator(a):
-  c = 1
-  while True:
-    yield f'a x {c} = {a * c}'
-    c += 1
+def remove_url_anchor(url):
+  return url.split('#')[0]
+
+print(remove_url_anchor("www.codewars.com#about"))
