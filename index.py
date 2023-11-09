@@ -1,4 +1,5 @@
+import re
 def remove_url_anchor(url):
-  return url.split('#')[0]
+  return re.sub('#.*', '', url)
 
 print(remove_url_anchor("www.codewars.com#about"))
