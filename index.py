@@ -1,11 +1,11 @@
-def solution(s):
-  newS = []
-  for i in range (0, len(s)):
-    if i % 2 == 0:
-          if(len(s) == i +1):
-            newS.append(s[i]+'_')
-          else:
-            newS.append(s[i]+ s[i+1])
-  return newS
-  
-print(solution("abcd"))
+def is_leap_year(year):
+    if year % 4 == 0:
+        if year % 100 == 0 and year % 400 != 0:
+            return False
+        return True
+    return False
+
+print(is_leap_year(2020))
+print(is_leap_year(2000))
+print(is_leap_year(2015))
+print(is_leap_year(2100))
